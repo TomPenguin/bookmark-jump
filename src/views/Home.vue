@@ -1,18 +1,18 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <SearchBar msg="Welcome to Your Vue.js App" />
+    <SearchBar msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import SearchBar from "@/components/SearchBar.vue";
+<script lang="ts">
+import Vue from "vue";
+import SearchBar from "@/components/SearchBar.vue"; // @ is an alias to /src
 
-export default {
+export default Vue.extend({
   name: "Home",
   components: {
     SearchBar,
   },
-};
+});
 </script>

@@ -20,11 +20,18 @@ html {
   max-width: 50rem;
   max-height: 30rem;
   box-sizing: border-box;
-  background-image: linear-gradient(
-    135.9deg,
-    rgba(109, 25, 252, 1) 16.4%,
-    rgba(125, 31, 165, 1) 56.1%
-  );
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
 }
 
 html,
