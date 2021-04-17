@@ -1,3 +1,5 @@
-browser.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  console.log("Hello from the background", request, sender, sendResponse);
+import { browser } from "webextension-polyfill-ts";
+
+browser.runtime.onMessage.addListener(function() {
+  console.log("test");
 });

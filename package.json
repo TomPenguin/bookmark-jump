@@ -31,7 +31,7 @@
     "vue-cli-plugin-browser-extension": "latest",
     "vue-cli-plugin-vue-next": "~0.1.4",
     "vue-cli-plugin-vuetify": "~2.3.1",
-    "web-ext-types": "^3.2.1"
+    "webextension-polyfill-ts": "^0.25.0"
   },
   "_id": "bookmark-jump@0.1.0",
   "readme": "ERROR: No README data found!"
