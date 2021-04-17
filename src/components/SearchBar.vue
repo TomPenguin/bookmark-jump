@@ -6,16 +6,16 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  mounted () {
-    browser.runtime.sendMessage({})
+  name: "SearchBar",
+  mounted() {
+    browser.runtime.sendMessage({});
   },
   computed: {
-    defaultText () {
-      return browser.i18n.getMessage('extName')
-    }
-  }
-}
+    defaultText() {
+      return browser.i18n.getMessage("extName");
+    },
+  },
+};
 </script>
 
 <style scoped>
