@@ -1,4 +1,4 @@
-import { Ref } from "vue";
+import { computed } from "vue";
 import { Browser } from "webextension-polyfill-ts";
 
 type GetMessage = (i18n: Browser["i18n"], name: string) => string;
@@ -14,4 +14,9 @@ export const getMessages = (
     acc[name] = getMessage(i18n, name);
     return acc;
   }, {});
+};
+
+export const useMessages = (i18n: Browser["i18n"], names: string[]) => {
+  const messages = getMessages(i18n, names, getMessage);
+  return { messages: computed(messages) };
 };

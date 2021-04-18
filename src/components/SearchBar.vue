@@ -1,21 +1,21 @@
 <template>
   <div>
-    <p>{{ defaultText }}</p>
+    <p>{{ messages.extName }}</p>
   </div>
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+import { browser } from "webextension-polyfill-ts";
+import { useMessages } from "../compositions/useMessages";
+
+export default defineComponent({
   name: "SearchBar",
-  mounted() {
-    browser.runtime.sendMessage({});
+  setup() {
+    const { messages } = useMessages(browser.i18n, ["extName"]);
+    return { messages };
   },
-  computed: {
-    defaultText() {
-      return browser.i18n.getMessage("extName");
-    },
-  },
-};
+});
 </script>
 
 <style scoped>
